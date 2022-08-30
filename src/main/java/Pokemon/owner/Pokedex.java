@@ -24,24 +24,25 @@ public class Pokedex {
         return pokedex;
     }
 
-    public void ajouterPokemon(Pokemon poke){
+    public void ajouterPokemon(Pokemon poke) {
         this.pokedex.add(poke);
-        System.out.println(poke.getName()+" a été ajouté à la collection. " + this.getOwner().getName() +
+        System.out.println(poke.getName() + " a été ajouté à la collection. " + this.getOwner().getName() +
                 " possède maintenant " + this.pokedex.size() + " Pokemons.");
     }
 
-    public Pokemon choisirCombattant(int b){
-        System.out.println("Pokémon choisi: " + this.pokedex.get(b).getName() );
+    public Pokemon choisirCombattant(int b) {
+        System.out.println("Pokémon choisi: " + this.pokedex.get(b).getName());
         return this.pokedex.get(b);
     }
-    public Pokemon choisirCombattant(){
+
+    public Pokemon choisirCombattant() {
         Scanner scan = new Scanner(System.in);
 
-        Pokemon chosen = new Pokemon();
+        Pokemon chosen = null;
         String makeYourChoice = "Choisissez le Pokémon combattant.\n";
         StringBuilder sb = new StringBuilder(makeYourChoice);
-        for(int i=0; i<this.getPokedex().size();i++){
-            sb.append((i+1) + " - " + this.getPokedex().get(i).getName() + "\n");
+        for (int i = 0; i < this.getPokedex().size(); i++) {
+            sb.append((i + 1) + " - " + this.getPokedex().get(i).getName() + "\n");
         }
 
         int pokeChoice = -1;
@@ -54,17 +55,22 @@ public class Pokedex {
             }
         } while (pokeChoice < 0);
 
-        switch(pokeChoice) {
-            case 1:
-                 chosen =  this.pokedex.get(0);
-            break;
-            case 2:
-                chosen = this.pokedex.get(1);
-            break;
-            case 3:
-                chosen =  this.pokedex.get(2);
-            break;
-        }
+        do {
+
+                switch (pokeChoice) {
+                    case 1:
+                        chosen = this.pokedex.get(0);
+                        break;
+                    case 2:
+                        chosen = this.pokedex.get(1);
+                        break;
+                    case 3:
+                        chosen = this.pokedex.get(2);
+                        break;
+                }
+
+
+        } while (chosen == null);
         return chosen;
     }
 
@@ -83,9 +89,8 @@ public class Pokedex {
         }
         if (number <= 0) {
             throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
-        }
-        else if(number>3){
-            throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
+        } else if (number > this.pokedex.size()) {
+            throw new InputMismatchException("Entrez un nombre entre 1 et " + this.pokedex.size() + " !");
         }
         return number;
     }

@@ -12,6 +12,8 @@ public class Main {
         Pokemon carapuce = new PokeEau(50, 50,12,18,"Carapuce");
         Pokemon coconfort = new PokeInsecte(50,50,15,20,"Coconfort");
         Pokemon papinox = new PokeInsecte(80,80,15, 20,"Papinox");
+        Pokemon pikachu = new PokeEau(80,80,15,20,"Pikachu");
+        Pokemon magicarpe = new PokeEau(80,80,0,2,"Magicarpe");
 
         //generating owners
         Owner player = new Owner();
@@ -21,16 +23,16 @@ public class Main {
         steve.getPokedex().getPokedex().add(bulbizar);
         steve.getPokedex().getPokedex().add(papinox);
         steve.getPokedex().getPokedex().add(salameche);
-        steve.getPokedex().getPokedex().add(coconfort);
 
-        //eleven.getPokedex().getPokedex().add(coconfort);
-        //eleven.getPokedex().getPokedex().add(carapuce);
+
+        eleven.getPokedex().getPokedex().add(pikachu);
+        eleven.getPokedex().getPokedex().add(magicarpe);
 
         player.fight(steve);
 
         player.rest();
 
-       // player.fight(eleven);
+       player.fight(eleven);
 
 
 

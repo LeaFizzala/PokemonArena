@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Created classes for Pokemons and Owners, a few tests using Junit for basic functionalities. So far, the user can choose her name, pick from three teams of Pokemons and then select which to use for each duel. Exception handling on user input for InputMismatchException.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
+    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Created rest() functions for Pokemons still alive after a fight.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PokedexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokedexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +130,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661506895317</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created rest() functions for Pokemons still alive after a fight.">
+      <created>1661846856587</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661846856587</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +165,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created classes for Pokemons and Owners, a few tests using Junit for basic functionalities. So far, the user can choose her name, pick from three teams of Pokemons and then select which to use for each duel. Exception handling on user input for InputMismatchException." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created classes for Pokemons and Owners, a few tests using Junit for basic functionalities. So far, the user can choose her name, pick from three teams of Pokemons and then select which to use for each duel. Exception handling on user input for InputMismatchException." />
+    <MESSAGE value="Created rest() functions for Pokemons still alive after a fight." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created rest() functions for Pokemons still alive after a fight." />
   </component>
 </project>
