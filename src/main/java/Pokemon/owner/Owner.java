@@ -39,19 +39,19 @@ public class Owner implements Fighting {
 
         switch(teamChoice) {
             case 1:
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Carapuce"));
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Chétiflor"));
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Magnéti"));
+                this.getPokedex().getPokedex().add(new Pokemon(50,50,10,20,"Carapuce"));
+                this.getPokedex().getPokedex().add(new Pokemon(50,50,10,20,"Chétiflor"));
+                this.getPokedex().getPokedex().add(new Pokemon(50,50,10,20,"Magnéti"));
                 break;
             case 2:
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Salamèche"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Coconfort"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Taupiqueur"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Salamèche"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Coconfort"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Taupiqueur"));
                 break;
             case 3:
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Bulbizarre"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Smogo"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Roucool"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Bulbizarre"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Smogo"));
+                this.getPokedex().getPokedex().add(new Pokemon(100,100,10,20,"Roucool"));
                 break;
 
         }
@@ -117,7 +117,10 @@ public class Owner implements Fighting {
 
     @Override
     public void rest() {
-
+        for (Pokemon p : this.getPokedex().getPokedex()
+             ) {
+            p.rest();
+        }
     }
     public int readChoice(Scanner scan) throws InputMismatchException {
         String strNumber = scan.nextLine();

@@ -8,8 +8,8 @@ public class PokeHerbe extends Pokemon{
 
     }
 
-    public PokeHerbe(int HP, int DP, int ATK, String name) {
-        super(HP, DP, ATK, name);
+    public PokeHerbe(int HPmax, int HP, int DP, int ATK, String name) {
+        super(HPmax, HP, DP, ATK, name);
     }
 
     public String getType() {

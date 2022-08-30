@@ -28,16 +28,16 @@ public void PokedexGeneratorTest(){
 @Test
 public void addingPokemonToPokedex(){
 
-        test.getPokedex().add(new Pokemon(100,10,10,"Testemon"));
+        test.getPokedex().add(new Pokemon(100,100,10,10,"Testemon"));
         assertEquals(test.getPokedex().get(0).getName(),"Testemon");
 
 }
 
     @Test
     public void displayingPokemonInPokedex(){
-        test.getPokedex().add(new Pokemon(100,10,10,"Testemon"));
-        test.getPokedex().add(new Pokemon(100,10,10,"Rondoudou"));
-        test.getPokedex().add(new Pokemon(100,10,10,"Raïchu"));
+        test.getPokedex().add(new Pokemon(100,100,10,10,"Testemon"));
+        test.getPokedex().add(new Pokemon(100,100,10,10,"Rondoudou"));
+        test.getPokedex().add(new Pokemon(100,100,10,10,"Raïchu"));
 
         String makeYourChoice = "Choisissez le Pokémon combattant.\n";
         StringBuilder sb = new StringBuilder(makeYourChoice);

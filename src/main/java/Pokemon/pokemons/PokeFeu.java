@@ -8,8 +8,8 @@ public class PokeFeu extends Pokemon{
         super(HP, DP, ATK, name, level);
     }
 
-    public PokeFeu(int HP, int DP, int ATK, String name) {
-        super(HP, DP, ATK, name);
+    public PokeFeu(int HPmax, int HP, int DP, int ATK, String name) {
+        super(HPmax, HP, DP, ATK, name);
     }
 
     public String getType() {

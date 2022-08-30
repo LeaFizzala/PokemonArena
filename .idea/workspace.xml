@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Created classes for Pokemons and Owners, a few tests using Junit for basic functionalities. So far, the user can choose her name, pick from three teams of Pokemons and then select which to use for each duel. Exception handling on user input for InputMismatchException.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Fighting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FightTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OwnerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PokedexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PokedexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokedexTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -80,16 +78,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightTest.bilateralFight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokemonArena" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FightTest" />
-      <option name="METHOD_NAME" value="bilateralFight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FightTest.emptyingPokedex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokemonArena" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,13 +108,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RestTest.testRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokemonArena" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RestTest" />
+      <option name="METHOD_NAME" value="testRest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.RestTest.testRest" />
         <item itemvalue="JUnit.PokedexTest.displayingPokemonInPokedex" />
         <item itemvalue="JUnit.FightTest.fightWithSeveralPokemons" />
         <item itemvalue="JUnit.FightTest.emptyingPokedex" />
-        <item itemvalue="JUnit.FightTest.bilateralFight" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +144,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="arenaSystem" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

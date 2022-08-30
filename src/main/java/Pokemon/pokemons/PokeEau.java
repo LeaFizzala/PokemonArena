@@ -8,8 +8,8 @@ public class PokeEau extends Pokemon{
 
     }
 
-    public PokeEau(int HP, int DP, int ATK, String name) {
-        super(HP, DP, ATK, name);
+    public PokeEau(int HPmax, int HP, int DP, int ATK, String name) {
+        super(HPmax, HP, DP, ATK, name);
     }
 
     public String getType() {

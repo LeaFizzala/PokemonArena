@@ -2,7 +2,8 @@ package Pokemon.pokemons;
 
 public class Pokemon {
 
-    private int HP;
+    private int HPmax;
+    private int HP = HPmax;
     private int DP;
     private int ATK;
     private String name;
@@ -11,7 +12,8 @@ public class Pokemon {
 
     public Pokemon() {}
 
-    public Pokemon(int HP, int DP, int ATK, String name) {
+    public Pokemon(int HPmax, int HP, int DP, int ATK, String name) {
+        this.HPmax = HPmax;
         this.HP = HP;
         this.DP = DP;
         this.ATK = ATK;
@@ -51,6 +53,10 @@ public class Pokemon {
         this.HP = HP;
     }
 
+    public int getHPmax() {
+        return HPmax;
+    }
+
     public void attaque(Pokemon p){
         System.out.println(this.getName() + " attaque !");
          p.setHP(p.getHP()-this.getATK());
@@ -60,5 +66,9 @@ public class Pokemon {
          else{
              System.out.println(p.getName() + " perd connaissance !");
          }
+    }
+    public void rest(){
+        System.out.println(this.getName() + " se repose et regagne " + (HPmax-HP) + " HP.");
+        this.setHP(HPmax);
     }
 }
