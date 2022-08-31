@@ -1,19 +1,64 @@
 package Pokemon;
 
+import Pokemon.dao.PokemonDAO;
+import Pokemon.dao.PokemonDAOImpl;
+import Pokemon.dao.PokemonRepository;
 import Pokemon.owner.Owner;
 import Pokemon.pokemons.*;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.FluentQuery;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
 
 public class Main {
+
     public static void main(String[] args) {
 
+        //create session factory
+        SessionFactory factory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Pokemon.class)
+                .buildSessionFactory();
+        //create a session
+        Session session = factory.getCurrentSession();
+
+        List<Pokemon> thePokemons;
+        try {
+            //use the session object to save Java objects
+
+            //start a transaction
+            session.beginTransaction();
+
+            //query
+            thePokemons = session.createQuery("from Pokemon").list();
+
+            // commit transaction
+            session.getTransaction().commit();
+
+        } finally {
+            factory.close();
+        }
+
         //generating the starter pokemons
-        Pokemon bulbizar = new PokeHerbe(50, 50,10,20,"Bulbizar");
-        Pokemon salameche = new PokeFeu(50, 50,8,22, "Salameche");
-        Pokemon carapuce = new PokeEau(50, 50,12,18,"Carapuce");
-        Pokemon coconfort = new PokeInsecte(50,50,15,20,"Coconfort");
-        Pokemon papinox = new PokeInsecte(80,80,15, 20,"Papinox");
-        Pokemon pikachu = new PokeEau(80,80,15,20,"Pikachu");
-        Pokemon magicarpe = new PokeEau(80,80,0,2,"Magicarpe");
+        Pokemon bulbizar = thePokemons.get(2);
+        Pokemon salameche = thePokemons.get(3);
+        Pokemon carapuce = thePokemons.get(4);
+        Pokemon coconfort = thePokemons.get(5);
+        Pokemon papinox = thePokemons.get(6);
+        Pokemon pikachu = thePokemons.get(0);
+        Pokemon roucool = thePokemons.get(1);
+
 
         //generating owners
         Owner player = new Owner();
@@ -26,16 +71,13 @@ public class Main {
 
 
         eleven.getPokedex().getPokedex().add(pikachu);
-        eleven.getPokedex().getPokedex().add(magicarpe);
+        eleven.getPokedex().getPokedex().add(roucool);
 
         player.fight(steve);
 
         player.rest();
 
-       player.fight(eleven);
-
-
-
+        player.fight(eleven);
 
 
     }

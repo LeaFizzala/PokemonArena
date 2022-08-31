@@ -27,9 +27,9 @@ public class Owner implements Fighting {
         do {
             try {
                 System.out.println("Choisis ton équipe de départ. \n" +
-                        " 1 : Carapuce, Chétiflor, Magnéti \n" +
+                        "1 : Carapuce, Chétiflor, Magnéti \n" +
                         "2 : Salamèche, Coconfort, Taupiqueur \n" +
-                        " 3 : Bulbizarre, Smogo, Roucool");
+                        "3 : Bulbizarre, Smogo, Roucool");
                 teamChoice = readChoice(scan);
             } catch (InputMismatchException e) {
                 System.err.println("[ " + e.getMessage() + " ]");

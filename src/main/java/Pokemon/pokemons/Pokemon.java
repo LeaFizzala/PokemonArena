@@ -1,13 +1,28 @@
 package Pokemon.pokemons;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="pokemon")
 public class Pokemon {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id_pokemon")
+    private int id;
+    @Column(name="hp_max")
     private int HPmax;
+
+    @Column(name="hp")
     private int HP = HPmax;
+    @Column(name="dp")
     private int DP;
+    @Column(name="atk")
     private int ATK;
+    @Column(name="name")
     private String name;
 
+    @Column(name="level_pokemon")
     private int level;
 
     public Pokemon() {}
@@ -70,5 +85,9 @@ public class Pokemon {
     public void rest(){
         System.out.println(this.getName() + " se repose et regagne " + (HPmax-HP) + " HP.");
         this.setHP(HPmax);
+    }
+
+    public int getId() {
+        return this.id;
     }
 }

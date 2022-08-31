@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Created rest() functions for Pokemons still alive after a fight.">
+    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Fixed issue with Pokemon choice when Pokemon is dead.">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/CreatePokemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/QueryPokemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/dao/PokemonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/dao/PokemonDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/dao/PokemonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DbTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -29,6 +43,22 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,15 +79,46 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/leafi/IdeaProjects/PokemonArena/src/main/java&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/leafi/IdeaProjects/PokemonArena/src/main/java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\leafi\IdeaProjects\PokemonArena\src\main\java" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Stagiaire\IdeaProjects\PokemonArena\src\main\resources" />
+      <recent name="C:\Users\Stagiaire\IdeaProjects\PokemonArena\src\main" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokemon.Application" />
+      <module name="PokemonArena" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokemon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatePokemon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokemon.CreatePokemon" />
+      <module name="PokemonArena" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokemon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Pokemon.Main" />
       <module name="PokemonArena" />
@@ -71,41 +132,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightTest.emptyingPokedex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryPokemon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokemon.QueryPokemon" />
       <module name="PokemonArena" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FightTest" />
-      <option name="METHOD_NAME" value="emptyingPokedex" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokemon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightTest.fightWithSeveralPokemons" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DbTesting.callAPokeFromDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokemonArena" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FightTest" />
-      <option name="METHOD_NAME" value="fightWithSeveralPokemons" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PokedexTest.displayingPokemonInPokedex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokemonArena" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokedexTest" />
-      <option name="METHOD_NAME" value="displayingPokemonInPokedex" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestTest.testRest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokemonArena" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RestTest" />
-      <option name="METHOD_NAME" value="testRest" />
+      <option name="MAIN_CLASS_NAME" value="DbTesting" />
+      <option name="METHOD_NAME" value="callAPokeFromDb" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,10 +158,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.RestTest.testRest" />
-        <item itemvalue="JUnit.PokedexTest.displayingPokemonInPokedex" />
-        <item itemvalue="JUnit.FightTest.fightWithSeveralPokemons" />
-        <item itemvalue="JUnit.FightTest.emptyingPokedex" />
+        <item itemvalue="Application.CreatePokemon" />
+        <item itemvalue="Application.QueryPokemon" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.DbTesting.callAPokeFromDb" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661846856587</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed issue with Pokemon choice when Pokemon is dead.">
+      <created>1661852303272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661852303272</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +217,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created classes for Pokemons and Owners, a few tests using Junit for basic functionalities. So far, the user can choose her name, pick from three teams of Pokemons and then select which to use for each duel. Exception handling on user input for InputMismatchException." />
     <MESSAGE value="Created rest() functions for Pokemons still alive after a fight." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created rest() functions for Pokemons still alive after a fight." />
+    <MESSAGE value="Fixed issue with Pokemon choice when Pokemon is dead." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with Pokemon choice when Pokemon is dead." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/DbTesting.java</url>
+          <line>15</line>
+          <properties class="DbTesting" method="callAPokeFromDb">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
