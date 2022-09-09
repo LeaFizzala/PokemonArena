@@ -19,7 +19,7 @@ public class QueryPokemon {
         return starterPack;
     }
 
-    public static void main(String[] args) {
+    public static void main() {
 
             //create session factory
             SessionFactory factory = new Configuration()

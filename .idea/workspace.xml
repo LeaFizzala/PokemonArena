@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Added a hibernate config file to store the Pokemons in the database and query them from there. Made the Pokemon class an @Entity.">
+    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/CreatePokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/CreatePokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/QueryPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/QueryPokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/dao/PokemonDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/dao/PokemonDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeEau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeFeu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeHerbe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/PokeInsecte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/pokemons/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FightTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +79,7 @@
       <recent name="C:\Users\Stagiaire\IdeaProjects\PokemonArena\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QueryPokemon">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Pokemon.Application" />
       <module name="PokemonArena" />
@@ -153,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QueryPokemon" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.QueryPokemon" />
         <item itemvalue="Application.CreatePokemon" />
         <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.DbTesting.callAPokeFromDb" />
@@ -191,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661930758360</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons.">
+      <created>1662723749359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662723749359</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +220,8 @@
     <MESSAGE value="Created rest() functions for Pokemons still alive after a fight." />
     <MESSAGE value="Fixed issue with Pokemon choice when Pokemon is dead." />
     <MESSAGE value="Added a hibernate config file to store the Pokemons in the database and query them from there. Made the Pokemon class an @Entity." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a hibernate config file to store the Pokemons in the database and query them from there. Made the Pokemon class an @Entity." />
+    <MESSAGE value="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,7 +246,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Pokemon/Main.java</url>
-          <line>23</line>
+          <line>26</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

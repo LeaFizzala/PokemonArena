@@ -21,43 +21,23 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import static Pokemon.QueryPokemon.getThePokemons;
+
+
 public class Main {
 
     public static void main(String[] args) {
 
-        //create session factory
-        SessionFactory factory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Pokemon.class)
-                .buildSessionFactory();
-        //create a session
-        Session session = factory.getCurrentSession();
-
-        List<Pokemon> thePokemons;
-        try {
-            //use the session object to save Java objects
-
-            //start a transaction
-            session.beginTransaction();
-
-            //query
-            thePokemons = session.createQuery("from Pokemon").list();
-
-            // commit transaction
-            session.getTransaction().commit();
-
-        } finally {
-            factory.close();
-        }
+        QueryPokemon.main();
 
         //generating the starter pokemons
-        Pokemon bulbizar = thePokemons.get(2);
-        Pokemon salameche = thePokemons.get(3);
-        Pokemon carapuce = thePokemons.get(4);
-        Pokemon coconfort = thePokemons.get(5);
-        Pokemon papinox = thePokemons.get(6);
-        //Pokemon pikachu = thePokemons.get(0);
-        Pokemon roucool = thePokemons.get(1);
+        Pokemon bulbizar = getThePokemons().get(2);
+        Pokemon salameche = getThePokemons().get(3);
+        Pokemon carapuce = getThePokemons().get(4);
+        Pokemon coconfort = getThePokemons().get(5);
+        Pokemon papinox = getThePokemons().get(6);
+        Pokemon pikachu = getThePokemons().get(0);
+        Pokemon roucool = getThePokemons().get(1);
 
 
         //generating owners

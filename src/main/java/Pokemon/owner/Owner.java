@@ -6,7 +6,7 @@ import Pokemon.pokemons.Pokemon;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static Pokemon.QueryPokemon.getThePokemons;
+import static Pokemon.QueryPokemon.getStarterPack;
 
 public class Owner implements Fighting {
     private String name;
@@ -22,41 +22,46 @@ public class Owner implements Fighting {
 
         this.pokedex = new Pokedex(this);
         Scanner scan = new Scanner(System.in);
-        System.out.println("Quel est ton nom d'entraîneur ?");
+        System.out.println("What's your name ?");
         this.name = scan.nextLine();
-        System.out.println("Bienvenue à toi, " + this.name + ".");
+        System.out.println("Welcome, " + this.name + ".");
         int teamChoice = -1;
         do {
             try {
-                System.out.println("Choisis ton équipe de départ. \n" +
-                        "1 : Carapuce, Chétiflor, Magnéti \n" +
-                        "2 : Salamèche, Coconfort, Taupiqueur \n" +
-                        "3 : Bulbizarre, Smogo, Roucool");
+                System.out.println("Choose your first Pokemon. \n" +
+                        getStarterPack().get(0).getName()+ "\n"+
+                        getStarterPack().get(1).getName()+ "\n"+
+                        getStarterPack().get(2).getName()+ "\n"+
+                        getStarterPack().get(3).getName()+ "\n"+
+                        getStarterPack().get(4).getName()+ "\n"+
+                        getStarterPack().get(5).getName()
+
+                );
                 teamChoice = readChoice(scan);
             } catch (InputMismatchException e) {
                 System.err.println("[ " + e.getMessage() + " ]");
             }
         } while (teamChoice < 0);
 
-
-        switch(teamChoice) {
-            case 1:
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                this.getPokedex().getPokedex().add(getThePokemons().get(13));
-                this.getPokedex().getPokedex().add(getThePokemons().get(20));
-                break;
-            case 2:
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                break;
-            case 3:
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-                break;
-
-        }
+        this.chooseFirstPoke(teamChoice);
+//        switch(teamChoice) {
+//            case 1:
+//                this.getPokedex().getPokedex().add(getStarterPack().get(2));
+//                this.getPokedex().getPokedex().add(getStarterPack().get(13));
+//                this.getPokedex().getPokedex().add(getStarterPack().get(20));
+//                break;
+//            case 2:
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                break;
+//            case 3:
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
+//                break;
+//
+//        }
 
 
     }
@@ -136,5 +141,9 @@ public class Owner implements Fighting {
             throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
         }
         return number;
+    }
+    public void chooseFirstPoke(int choice){
+        this.getPokedex().getPokedex().add(getStarterPack().get(choice-1));
+        System.out.println("You chose " + getStarterPack().get(choice-1).getName() );
     }
 }
