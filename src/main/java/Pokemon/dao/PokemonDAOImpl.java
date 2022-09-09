@@ -20,16 +20,6 @@ public class PokemonDAOImpl implements PokemonDAO {
     public Pokemon trouverParId(int id) {
         Optional<Pokemon> result = pR.findById(id);
 
-        Pokemon thePokemon = null;
-
-        if (result.isPresent()) {
-            thePokemon = result.get();
-        }
-        else {
-            // we didn't find the employee
-            throw new RuntimeException("Did not find employe id - " + id);
-        }
-
-        return thePokemon;
+return        result.orElseThrow(() -> new RuntimeException("Did not find Pokemon id - " + id));
     }
 }

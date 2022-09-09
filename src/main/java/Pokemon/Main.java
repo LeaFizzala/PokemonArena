@@ -56,7 +56,7 @@ public class Main {
         Pokemon carapuce = thePokemons.get(4);
         Pokemon coconfort = thePokemons.get(5);
         Pokemon papinox = thePokemons.get(6);
-        Pokemon pikachu = thePokemons.get(0);
+        //Pokemon pikachu = thePokemons.get(0);
         Pokemon roucool = thePokemons.get(1);
 
 
@@ -70,7 +70,7 @@ public class Main {
         steve.getPokedex().getPokedex().add(salameche);
 
 
-        eleven.getPokedex().getPokedex().add(pikachu);
+        //eleven.getPokedex().getPokedex().add(pikachu);
         eleven.getPokedex().getPokedex().add(roucool);
 
         player.fight(steve);

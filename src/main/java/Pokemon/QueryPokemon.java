@@ -4,13 +4,22 @@ import Pokemon.pokemons.Pokemon;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
 public class QueryPokemon {
+   private static List<Pokemon> thePokemons;
+    private static List<Pokemon> starterPack;
+    public static List<Pokemon> getThePokemons() {
+        return thePokemons;
+    }
 
+    public static List<Pokemon> getStarterPack() {
+        return starterPack;
+    }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
             //create session factory
             SessionFactory factory = new Configuration()
@@ -26,12 +35,15 @@ public class QueryPokemon {
                 //start a transaction
                 session.beginTransaction();
 
-                //query students
-                List<Pokemon> thePokemons = session.createQuery("from Pokemon").list();
+                //query pokemons
 
-                //display the students
-                displayPokes(thePokemons);
+                thePokemons = session.createQuery("from Pokemon").list();
 
+                Query<Pokemon> poke = session.createQuery("from Pokemon where total<400 order by id_pokemon").setMaxResults(10);
+               starterPack = poke.list();
+
+                //display the pokemons
+                displayPokes(starterPack);
 
                 // commit transaction
                 session.getTransaction().commit();
@@ -46,9 +58,7 @@ public class QueryPokemon {
         }
 
         private static void displayPokes(List<Pokemon> thePokemons) {
-            for(Pokemon tempPoke : thePokemons) {
-                System.out.println(tempPoke);
-            }
+            thePokemons.forEach(e -> System.out.println(e.getName()));
         }
 
     }

@@ -1,5 +1,4 @@
 import Pokemon.owner.Owner;
-import Pokemon.pokemons.PokeInsecte;
 import Pokemon.pokemons.Pokemon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
