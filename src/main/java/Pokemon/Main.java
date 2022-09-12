@@ -31,7 +31,7 @@ public class Main {
         QueryPokemon.main();
 
         //generating the starter pokemons
-        Pokemon bulbizar = getThePokemons().get(2);
+        Pokemon caterpie = getThePokemons().get(13);
         Pokemon salameche = getThePokemons().get(3);
         Pokemon carapuce = getThePokemons().get(4);
         Pokemon coconfort = getThePokemons().get(5);
@@ -45,9 +45,7 @@ public class Main {
         Owner steve = new Owner("Steve", 2);
         Owner eleven = new Owner("Eleven", 18);
 
-        steve.getPokedex().getPokedex().add(bulbizar);
-        steve.getPokedex().getPokedex().add(papinox);
-        steve.getPokedex().getPokedex().add(salameche);
+        steve.getPokedex().getPokedex().add(caterpie);
 
 
         //eleven.getPokedex().getPokedex().add(pikachu);

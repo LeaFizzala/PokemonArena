@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons.">
+    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Changed the starter Pokemon choice, augmented to five choices for first Pokemon.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/arena/Arena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/arena/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/QueryPokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/QueryPokemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662723749359</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed the starter Pokemon choice, augmented to five choices for first Pokemon.">
+      <created>1662726731185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662726731185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +230,8 @@
     <MESSAGE value="Fixed issue with Pokemon choice when Pokemon is dead." />
     <MESSAGE value="Added a hibernate config file to store the Pokemons in the database and query them from there. Made the Pokemon class an @Entity." />
     <MESSAGE value="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons." />
+    <MESSAGE value="Changed the starter Pokemon choice, augmented to five choices for first Pokemon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the starter Pokemon choice, augmented to five choices for first Pokemon." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

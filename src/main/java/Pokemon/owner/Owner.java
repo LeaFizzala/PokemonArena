@@ -29,12 +29,11 @@ public class Owner implements Fighting {
         do {
             try {
                 System.out.println("Choose your first Pokemon. \n" +
-                        getStarterPack().get(0).getName()+ "\n"+
-                        getStarterPack().get(1).getName()+ "\n"+
-                        getStarterPack().get(2).getName()+ "\n"+
-                        getStarterPack().get(3).getName()+ "\n"+
-                        getStarterPack().get(4).getName()+ "\n"+
-                        getStarterPack().get(5).getName()
+                        "1 " + getStarterPack().get(0).getName()+ "\n"+
+                        "2 " + getStarterPack().get(1).getName()+ "\n"+
+                       "3 " + getStarterPack().get(2).getName()+ "\n"+
+                       "4 " + getStarterPack().get(3).getName()+ "\n"+
+                        "5 " +getStarterPack().get(4).getName()
 
                 );
                 teamChoice = readChoice(scan);
@@ -44,26 +43,24 @@ public class Owner implements Fighting {
         } while (teamChoice < 0);
 
         this.chooseFirstPoke(teamChoice);
-//        switch(teamChoice) {
-//            case 1:
-//                this.getPokedex().getPokedex().add(getStarterPack().get(2));
-//                this.getPokedex().getPokedex().add(getStarterPack().get(13));
-//                this.getPokedex().getPokedex().add(getStarterPack().get(20));
-//                break;
-//            case 2:
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                break;
-//            case 3:
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                this.getPokedex().getPokedex().add(getThePokemons().get(2));
-//                break;
-//
-//        }
 
+        do {
+            try {
+                System.out.println("Choose your second Pokemon. \n" +
+                        "1 " + getStarterPack().get(5).getName()+ "\n"+
+                        "2 " + getStarterPack().get(6).getName()+ "\n"+
+                        "3 " + getStarterPack().get(7).getName()+ "\n"+
+                        "4 " + getStarterPack().get(8).getName()+ "\n"+
+                        "5 " +getStarterPack().get(9).getName()
 
+                );
+                teamChoice = readChoice(scan);
+            } catch (InputMismatchException e) {
+                System.err.println("[ " + e.getMessage() + " ]");
+            }
+        } while (teamChoice < 0);
+
+        this.chooseSecondPoke(teamChoice);
     }
 
     public String getName() {
@@ -135,15 +132,22 @@ public class Owner implements Fighting {
         try {
             number = Integer.parseInt(strNumber);
         } catch (NumberFormatException e) {
-            throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
         }
         if (number <= 0) {
-            throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
+        }
+        else if(number >5){
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
         }
         return number;
     }
     public void chooseFirstPoke(int choice){
         this.getPokedex().getPokedex().add(getStarterPack().get(choice-1));
         System.out.println("You chose " + getStarterPack().get(choice-1).getName() );
+    }
+    public void chooseSecondPoke(int choice){
+        this.getPokedex().getPokedex().add(getStarterPack().get(choice+4));
+        System.out.println("You chose " + getStarterPack().get(choice+4).getName() );
     }
 }

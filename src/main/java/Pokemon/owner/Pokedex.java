@@ -1,5 +1,6 @@
 package Pokemon.owner;
 
+import Pokemon.arena.Arena;
 import Pokemon.pokemons.Pokemon;
 
 import java.util.ArrayList;
@@ -10,9 +11,14 @@ public class Pokedex {
 
     private ArrayList<Pokemon> pokedex;
     private Owner owner;
+    private Arena arena;
 
     public Pokedex(Owner o) {
         this.owner = o;
+        this.pokedex = new ArrayList<Pokemon>();
+    }
+    public Pokedex(Arena a) {
+        this.arena = a;
         this.pokedex = new ArrayList<Pokemon>();
     }
 
