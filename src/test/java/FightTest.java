@@ -1,5 +1,4 @@
 import Pokemon.owner.Owner;
-import Pokemon.pokemons.PokeInsecte;
 import Pokemon.pokemons.Pokemon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,8 +20,8 @@ public class FightTest {
 
     @BeforeEach
     public void createPokemons(){
-        p1 = new PokeInsecte(50,0,20,"Coconfort");
-        p2 = new PokeInsecte(80,0,20, "Papinox");
+        p1 = new PokeInsecte(50,50,0,20,"Coconfort");
+        p2 = new PokeInsecte(80,80,0,20, "Papinox");
     }
 
     @Test
@@ -81,10 +80,10 @@ public class FightTest {
 
     @Test
     public void fightWithSeveralPokemons(){
-        o1.getPokedex().getPokedex().add(new Pokemon(100,10,10,"Pikachu"));
-        o1.getPokedex().getPokedex().add(new Pokemon(100,10,10,"Evoli"));
-        o2.getPokedex().getPokedex().add(new Pokemon(100,10,10,"Abra"));
-        o2.getPokedex().getPokedex().add(new Pokemon(100,10,10,"Miaouss"));
+        o1.getPokedex().getPokedex().add(new Pokemon(100, 100,10,10,"Pikachu"));
+        o1.getPokedex().getPokedex().add(new Pokemon(100, 100,10,10,"Evoli"));
+        o2.getPokedex().getPokedex().add(new Pokemon(100, 100,10,10,"Abra"));
+        o2.getPokedex().getPokedex().add(new Pokemon(100, 100,10,10,"Miaouss"));
 
 
 

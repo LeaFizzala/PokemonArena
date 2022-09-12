@@ -6,6 +6,8 @@ import Pokemon.pokemons.Pokemon;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static Pokemon.QueryPokemon.getStarterPack;
+
 public class Owner implements Fighting {
     private String name;
     private int level;
@@ -20,43 +22,45 @@ public class Owner implements Fighting {
 
         this.pokedex = new Pokedex(this);
         Scanner scan = new Scanner(System.in);
-        System.out.println("Quel est ton nom d'entraîneur ?");
+        System.out.println("What's your name ?");
         this.name = scan.nextLine();
-        System.out.println("Bienvenue à toi, " + this.name + ".");
+        System.out.println("Welcome, " + this.name + ".");
         int teamChoice = -1;
         do {
             try {
-                System.out.println("Choisis ton équipe de départ. \n" +
-                        " 1 : Salamèche, Coconfort, Taupiqueur \n" +
-                        " 2 : Carapuce, Chétiflor, Magnéti \n" +
-                        " 3 : Bulbizarre, Smogo, Roucool");
+                System.out.println("Choose your first Pokemon. \n" +
+                        "1 " + getStarterPack().get(0).getName()+ "\n"+
+                        "2 " + getStarterPack().get(1).getName()+ "\n"+
+                       "3 " + getStarterPack().get(2).getName()+ "\n"+
+                       "4 " + getStarterPack().get(3).getName()+ "\n"+
+                        "5 " +getStarterPack().get(4).getName()
+
+                );
                 teamChoice = readChoice(scan);
             } catch (InputMismatchException e) {
                 System.err.println("[ " + e.getMessage() + " ]");
             }
         } while (teamChoice < 0);
 
+        this.chooseFirstPoke(teamChoice);
 
-        switch(teamChoice) {
-            case 1:
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Carapuce"));
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Chétiflor"));
-                this.getPokedex().getPokedex().add(new Pokemon(50,10,20,"Magnéti"));
-                break;
-            case 2:
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Salamèche"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Coconfort"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Taupiqueur"));
-                break;
-            case 3:
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Bulbizarre"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Smogo"));
-                this.getPokedex().getPokedex().add(new Pokemon(100,10,20,"Roucool"));
-                break;
+        do {
+            try {
+                System.out.println("Choose your second Pokemon. \n" +
+                        "1 " + getStarterPack().get(5).getName()+ "\n"+
+                        "2 " + getStarterPack().get(6).getName()+ "\n"+
+                        "3 " + getStarterPack().get(7).getName()+ "\n"+
+                        "4 " + getStarterPack().get(8).getName()+ "\n"+
+                        "5 " +getStarterPack().get(9).getName()
 
-        }
+                );
+                teamChoice = readChoice(scan);
+            } catch (InputMismatchException e) {
+                System.err.println("[ " + e.getMessage() + " ]");
+            }
+        } while (teamChoice < 0);
 
-
+        this.chooseSecondPoke(teamChoice);
     }
 
     public String getName() {
@@ -117,7 +121,10 @@ public class Owner implements Fighting {
 
     @Override
     public void rest() {
-
+        for (Pokemon p : this.getPokedex().getPokedex()
+             ) {
+            p.rest();
+        }
     }
     public int readChoice(Scanner scan) throws InputMismatchException {
         String strNumber = scan.nextLine();
@@ -125,11 +132,22 @@ public class Owner implements Fighting {
         try {
             number = Integer.parseInt(strNumber);
         } catch (NumberFormatException e) {
-            throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
         }
         if (number <= 0) {
-            throw new InputMismatchException("Entrez un nombre entre 1 et 3 !");
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
+        }
+        else if(number >5){
+            throw new InputMismatchException("Entrez un nombre entre 1 et 5 !");
         }
         return number;
+    }
+    public void chooseFirstPoke(int choice){
+        this.getPokedex().getPokedex().add(getStarterPack().get(choice-1));
+        System.out.println("You chose " + getStarterPack().get(choice-1).getName() );
+    }
+    public void chooseSecondPoke(int choice){
+        this.getPokedex().getPokedex().add(getStarterPack().get(choice+4));
+        System.out.println("You chose " + getStarterPack().get(choice+4).getName() );
     }
 }
