@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Added a second Pokemon to the Player's choice.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/arena/Arena.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/arena/Team.java" afterDir="false" />
+    <list default="true" id="1824eca6-b0e9-49f5-906e-2beb14ab47aa" name="Changes" comment="Created Team and Arena classes to complexify the DB structure and create one to one relationships.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/CreateOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pokemon/owner/Pokedex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PokedexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokedexTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +46,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -92,6 +96,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateOwner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pokemon.owner.CreateOwner" />
+      <module name="PokemonArena" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pokemon.owner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreatePokemon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Pokemon.CreatePokemon" />
       <module name="PokemonArena" />
@@ -131,23 +148,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DbTesting.callAPokeFromDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokemonArena" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DbTesting" />
-      <option name="METHOD_NAME" value="callAPokeFromDb" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CreateOwner" />
         <item itemvalue="Application.QueryPokemon" />
         <item itemvalue="Application.CreatePokemon" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.DbTesting.callAPokeFromDb" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662971283385</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created Team and Arena classes to complexify the DB structure and create one to one relationships.">
+      <created>1662978434563</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662978434563</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created Team and Arena classes to complexify the DB structure and create one to one relationships.">
+      <created>1662978445163</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662978445163</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +257,8 @@
     <MESSAGE value="Loaded CSV to Pokemon DB, changed QueryPokemon so it takes the full list and a started pack of 10 Pokemons." />
     <MESSAGE value="Changed the starter Pokemon choice, augmented to five choices for first Pokemon." />
     <MESSAGE value="Added a second Pokemon to the Player's choice." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a second Pokemon to the Player's choice." />
+    <MESSAGE value="Created Team and Arena classes to complexify the DB structure and create one to one relationships." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Team and Arena classes to complexify the DB structure and create one to one relationships." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

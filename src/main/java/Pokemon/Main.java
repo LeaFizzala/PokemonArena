@@ -41,21 +41,22 @@ public class Main {
 
 
         //generating owners
-        Owner player = new Owner();
-        Owner steve = new Owner("Steve", 2);
-        Owner eleven = new Owner("Eleven", 18);
+       // Owner player = new Owner();
+        Owner steve = new Owner();
+        steve.createOwner("Steve",3,3);
+        //Owner eleven = new Owner("Eleven", 18,2);
 
-        steve.getPokedex().getPokedex().add(caterpie);
+      //  steve.getPokedex().getPokedex().add(caterpie);
 
 
         //eleven.getPokedex().getPokedex().add(pikachu);
-        eleven.getPokedex().getPokedex().add(roucool);
-
-        player.fight(steve);
-
-        player.rest();
-
-        player.fight(eleven);
+//        eleven.getPokedex().getPokedex().add(roucool);
+//
+//        player.fight(steve);
+//
+//        player.rest();
+//
+//        player.fight(eleven);
 
 
     }
